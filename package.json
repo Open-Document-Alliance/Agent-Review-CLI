@@ -1,0 +1,58 @@
+{
+  "name": "agent-review-cli",
+  "version": "0.2.0",
+  "description": "Orchestrate parallel AI agents to review, fix, and integrate code changes across your codebase",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "agent-review": "bin/agent-review.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx --format esm --target node20 --out-dir dist --clean",
+    "dev": "tsx src/index.tsx",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run type-check && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "ai",
+    "code-review",
+    "cli",
+    "agents",
+    "codex",
+    "claude",
+    "opencode",
+    "developer-tools",
+    "automation",
+    "parallel",
+    "git"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Open-Document-Alliance/Agent-Review-CLI.git"
+  },
+  "homepage": "https://github.com/Open-Document-Alliance/Agent-Review-CLI",
+  "bugs": {
+    "url": "https://github.com/Open-Document-Alliance/Agent-Review-CLI/issues"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ink": "^5.2.1",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "@types/react": "^18.3.12",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
