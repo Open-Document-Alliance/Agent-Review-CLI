@@ -8,8 +8,8 @@ agent-review 4 -b claude-code -t "the authentication module"
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│   AGENT REVIEW  via Claude Code              elapsed 2m 34s     │
-│   run a1b2c3d4                               phase FIXING       │
+│   AGENT REVIEW  via Claude Code              elapsed 2m 34s      │
+│   run a1b2c3d4                               phase FIXING        │
 │   main → src/auth, src/middleware                                │
 └──────────────────────────────────────────────────────────────────┘
   ○ INIT ━━ ○ PLAN ━━ ● DISCOVER ━━ ◉ FIX ━━ ○ INTEGRATE ━━ ...
