@@ -29,6 +29,7 @@
     "type-check": "tsc --noEmit",
     "prepublishOnly": "pnpm run type-check && pnpm run build"
   },
+  "packageManager": "pnpm@10.16.1",
   "engines": {
     "node": ">=20"
   },
