@@ -4,8 +4,15 @@
   "description": "Orchestrate parallel AI agents to review, fix, and integrate code changes across your codebase",
   "type": "module",
   "license": "MIT",
+  "author": "Open-Document-Alliance",
   "bin": {
     "agent-review": "bin/agent-review.js"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
   },
   "files": [
     "bin",
@@ -13,11 +20,14 @@
     "README.md",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup src/index.tsx --format esm --target node20 --out-dir dist --clean",
     "dev": "tsx src/index.tsx",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run type-check && npm run build"
+    "prepublishOnly": "pnpm run type-check && pnpm run build"
   },
   "engines": {
     "node": ">=20"
